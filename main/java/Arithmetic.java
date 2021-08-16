@@ -11,9 +11,11 @@ public class Arithmetic {
     }
 
     public int divide(int num1,int num2){
-        if(num2==0){
-            throw new ArithmeticException("Division by zero not supported");
+        try{
+            return num1/num2;
+        }catch(ArithmeticException exception){
+            System.out.println(exception);
         }
-        return num1/num2;
+        return Integer.MAX_VALUE;
     }
 }
